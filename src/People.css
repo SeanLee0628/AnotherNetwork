@@ -1,0 +1,85 @@
+.people-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.people-list {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  gap: 20px;
+}
+
+.people-item {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.people-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.people-item p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.email {
+  position: relative;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  filter: blur(5px); /* Blur effect */
+  background: rgba(255, 255, 255, 0.8); /* Background color */
+  transition: filter 0.3s ease, background 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.email.visible {
+  filter: none; /* Remove blur effect */
+  background: none; /* Remove background color */
+}
+
+.email p {
+  margin: 0;
+  color: #000; /* Text color */
+}
+
+.view-email-button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-email-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .people-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .people-list {
+    grid-template-columns: 1fr; /* 1 item per row on small screens */
+  }
+}
